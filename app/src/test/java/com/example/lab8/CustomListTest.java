@@ -65,8 +65,8 @@ public class CustomListTest {
         CustomList cityList = MockCityList();
         assertEquals(0, cityList.countCities()); // Initially, there should be no cities.
 
-        cityList.addCity(new City("Saskatoon", "SK"));
-        cityList.addCity(new City("Regina", "SK"));
+        cityList.addCity(new City("TestCity", "TestProvince"));
+        cityList.addCity(new City("AnotherCity", "AnotherProvince"));
         assertEquals(2, cityList.countCities()); // Now there should be 2 cities.
     }
 
