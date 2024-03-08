@@ -49,6 +49,17 @@ public class CustomListTest {
         assertFalse(cityList.hasCity(anotherCity)); // Should be false as the city is not added
     }
 
+    @Test
+    void testDeleteCity() {
+        CustomList cityList = MockCityList();
+        City mockCity = new City("TestCity", "TestProvince");
+        cityList.addCity(mockCity);
+        assertTrue(cityList.hasCity(mockCity));
+
+        cityList.deleteCity(mockCity);
+        assertFalse(cityList.hasCity(mockCity));
+    }
+
 
 
 }
